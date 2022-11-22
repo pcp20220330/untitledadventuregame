@@ -1,4 +1,82 @@
-$primary: red;
+$primary: #CEB6CF;
+$secondary: #F0E4ED;
+$enable-cssgrid: true;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pirata+One&display=swap');
+
+.pirata {
+    font-family: 'Pirata One', cursive;
+}
+
+.baskerville {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.fahkwang {
+    font-family: 'Fahkwang', sans-serif;
+}
+
+.field-bg {
+    background: url("../images/field-bg.png");
+    background-size:cover;
+}
+
+.path-bg {
+    background-image: url('../images/path-bg.png');
+    background-size:cover;
+}
+
+.cork-bg {
+    background-image: url('../images/cork-bg.png');
+    background-size:cover;
+}
+
+.tan-bg {
+    background-color: #F3F7EE;
+}
+
+.green-bg {
+    background-color:#9AE17B;
+}
+
+.hero-message {
+    width: 90%;
+}
+
+
+
+h3.headline {
+text-align:center;
+display: grid;
+grid-template-columns: 1fr auto 1fr;
+grid-template-rows: 20px 0;
+grid-gap: 20px;
+}
+
+h3.headline:after,h3.headline:before {
+content: " ";
+display: block;
+border-bottom: 1px solid #111;
+}
+
+.email-button {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 5px;
+width: 200px;
+height: 50px;
+background-color: #7CCFFF!important;
+border: 2px solid #FFFFFF!important;
+box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.35);
+border-radius: 30px!important;
+font-family: 'Fahkwang', sans-serif!important;
+}
+
+
+
 
 @import './bootstrap.scss';
 

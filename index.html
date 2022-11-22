@@ -2,64 +2,362 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>The Untitled Adventure | A Social Interaction Game by Preston & Anna</title>
-    <link rel="stylesheet" href="./assets/css/main.css"
+  <title>The Untitled Adventure | A Social Interaction Game by Preston & Anna</title>
+  <link rel="stylesheet" href="./assets/css/main.css">
 
 </head>
-<body>
-    
-    <div class="col-lg-8 mx-auto p-4 py-md-5">
-      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
-          <span class="fs-4">Starter template</span>
-        </a>
-      </header>
-    
-      <main>
-        <h1>Get started with Bootstrap</h1>
-        <p class="fs-5 col-md-8">Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.</p>
-    
-        <div class="mb-5">
-          <a href="../examples/" class="btn btn-primary btn-lg px-4">Download examples</a>
-        </div>
-    
-        <hr class="col-3 col-md-2 mb-5">
-    
-        <div class="row g-5">
-          <div class="col-md-6">
-            <h2>Starter projects</h2>
-            <p>Ready to beyond the starter template? Check out these open source projects that you can quickly duplicate to a new GitHub repository.</p>
-            <ul class="icon-list ps-0">
-              <li class="d-flex align-items-start mb-1"><a href="https://github.com/twbs/bootstrap-npm-starter" rel="noopener" target="_blank">Bootstrap npm starter</a></li>
-              <li class="text-muted d-flex align-items-start mb-1">Bootstrap Parcel starter (coming soon!)</li>
-            </ul>
-          </div>
-    
-          <div class="col-md-6">
-            <h2>Guides</h2>
-            <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
-            <ul class="icon-list ps-0">
-              <li class="d-flex align-items-start mb-1"><a href="../getting-started/introduction/">Bootstrap quick start guide</a></li>
-              <li class="d-flex align-items-start mb-1"><a href="../getting-started/webpack/">Bootstrap Webpack guide</a></li>
-              <li class="d-flex align-items-start mb-1"><a href="../getting-started/parcel/">Bootstrap Parcel guide</a></li>
-              <li class="d-flex align-items-start mb-1"><a href="../getting-started/vite/">Bootstrap Vite guide</a></li>
-              <li class="d-flex align-items-start mb-1"><a href="../getting-started/contribute/">Contributing to Bootstrap</a></li>
-            </ul>
-          </div>
-        </div>
-      </main>
-      <footer class="pt-5 my-5 text-muted border-top">
-        Created by the Bootstrap team &middot; &copy; 2022
-      </footer>
-    </div>
-    
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    
-      </body>
+<body>
+
+  <!-- Header -->
+
+  <div class="container-fluid border-dark border-bottom field-bg site-header py-4">
+    <div class="row align-items-center h-100">
+      <div class="col-12 col-lg-5 col-md-6 col-sm-8 m-auto d-flex flex-column align-items-center">
+        <img src="./assets/images/logo.png" alt="The Untitled Adventure logo" class="w-100 center-block img-responsive">
+        <img src="./assets/images/hero-messages.png" alt="The Untitled Adventure logo" class="hero-message m-5">
+      </div>
+    </div>
+  </div>
+
+  <!-- Overview -->
+
+
+  <div class="container-fluid border-dark border-bottom bg-primary py-5">
+    <div class="row w-100 align-items-center justify-content-center">
+      <div class="col-lg-10 text-center" id="overview">
+        <h1 class="pirata">Welcome to the Wide World of Friendship</h1>
+        <p class="text-start">
+          This is The Untitled Adventure, a social interaction game that makes meeting and getting to know people in
+          your viscinity a unique journey of its own. For many of us, getting acquainted with people can feel awkward or
+          downright overwhelming. According to recent surveys, 30% of people ages 16-29 struggle with social
+          anxiety.<sup>1</sup> Our goal is to transform the process of getting to know people into an ongoing process
+          filled with fun and interesting things to do with eachother.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <h3 class="fahkwang">Design a character</h3>
+        <p class="baskerville">
+          Create your own unique buddy who travels the world with you meeting new potential friends everywhere you go.
+        </p>
+        <img src="./assets/images/createcharacter.png" alt="" class="createcharacter m-5">
+      </div>
+      <div class="col-6">
+        <h3 class="fahkwang">Develop the Story</h3>
+        <p class="baskerville">
+          Your buddy stays active and posts updates on the Adventure Board. Check-in regularly to give it advice and
+          develop its personality.
+        </p>
+        <img src="./assets/images/adventureboard.png" alt="" class="adventureboard m-5">
+      </div>
+    </div>
+  </div>
+
+  <!-- Interaction Section -->
+
+  <div class="container-fluid border-dark border-bottom path-bg py-5">
+    <h1 class="pirata w-100 text-center">Interact with Real People</h1>
+    <div class="row w-100 justify-content-center">
+      <div class="col-lg-6">
+        <h3 class="fahkwang">1. Break the Ice</h3>
+        <p class="baskerville">
+          Start by encountering other adventurers nearby and discover eachother's hidden interests through turn-based
+          game format.
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <img src="./assets/images/firstinteraction.png" alt="" class="firstinteraction">
+      </div>
+    </div>
+    <div class="row w-100 justify-content-center">
+      <div class="col-lg-4">
+        <img src="./assets/images/secondinteraction.png" alt="" class="secondinteraction">
+      </div>
+      <div class="col-lg-6">
+        <h3 class="fahkwang">2. Meet Again</h3>
+        <p class="baskerville">
+          After you meet a second time, your interests are displayed and the keyboard becomes available to chat in
+          real-time.
+        </p>
+      </div>
+    </div>
+    <div class="row w-100 justify-content-center">
+      <div class="col-lg-6">
+        <h3 class="fahkwang">3. Make Friends</h3>
+        <p class="baskerville">
+          Create friendships with people you encounter frequently. Then, when you're both ready, you can meet face to
+          face.
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <img src="./assets/images/firstinteraction.png" alt="" class="firstinteraction">
+      </div>
+    </div>
+  </div>
+
+  <!-- Meet the Team -->
+
+  <div class="container-fluid bg-secondary border-dark border-bottom py-5">
+    <div class="row w-100 justify-content-center">
+      <div class="col-lg-10">
+        <h1 class="pirata w-100 text-center">Meet the Team</h1>
+        <p class="baskerville">
+          Preston and Anna attended the University of Minnesota UX/UI Bootcamp, certified in November 2022. This project
+          was created during a 3-week sprint to demonstrate our user experience (UX), user interface (UI), and front-end
+          (FE) development skills by creating a high-fidelity prototype and coding a promotional web-page.
+        </p>
+      </div>
+    </div>
+    <div class="row w-100 justify-content-center">
+      <div class="col-sm-5">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="./assets/images/anna.png" alt="" class="anna img-fluid">
+          </div>
+          <div class="col-sm-8">
+            <h2 class="teamname fahkwang">Anna Biernacki</h2>
+            <p class="fahkwang">
+              Anna is... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget lectus convallis, auctor
+              nibh nec, congue ligula.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="./assets/images/preston.png" alt="" class="anna img-fluid">
+          </div>
+          <div class="col-sm-8">
+            <h2 class="teamname fahkwang">Preston Palmer</h2>
+            <p class="fahkwang">
+              Preston is a Minneapolis-based game designer and developer seeking a career in UX Design. In his free time
+              he loves learning about Astronomy and Quantum Mechanics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Design Roadmap -->
+
+
+  <div class="container-fluid cork-bg border-dark border-bottom py-5">
+    <div class="row w-100 justify-content-center">
+      <div class="col-lg-10">
+        <h1 class="pirata w-100 text-center">Design Roadmap</h1>
+        <h3 class="headline fahkwang">Planned Features</h3>
+
+        <!-- Row 1 -->
+
+        <div class="row my-3">
+          <div class="col-lg-4">
+            <div class="card feature-content h-100">
+              <div class="card-body">
+                <h4 class="featuretitle fahkwang">Extend Level Design</h4>
+                <p class="featuretext fahkwang">
+                  We plan to expand upon the concept of interaction types with new options opening up after the 3rd
+                  interaction and so on.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card feature-content h-100">
+              <div class="card-body">
+                <h4 class="featuretitle fahkwang">Mini-Games</h4>
+                <p class="featuretext fahkwang">
+                  In addition to making conversation, we want to offer mini-games from checkers to more complex games
+                  that could incorporate real-world location-based elements.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card feature-content h-100">
+              <div class="card-body">
+                <h4 class="featuretitle fahkwang">Achievements</h4>
+                <p class="featuretext fahkwang">
+                  To reward people for playing the game, we want to add achievements that can be unlocked by making
+                  friends and exploring the player’s natural environment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+
+        <div class="row my-3">
+          <div class="col-lg-4">
+            <div class="card feature-content h-100">
+              <div class="card-body">
+                <h4 class="featuretitle fahkwang">Develop Character Design</h4>
+                <p class="featuretext fahkwang">
+                  The current characters were created for demonstration purposes. We would like to work with a graphic
+                  artist to give the characters more depth and options for variety.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card feature-content h-100">
+              <div class="card-body">
+                <h4 class="featuretitle fahkwang">Adventure Sync</h4>
+                <p class="featuretext fahkwang">
+                  User's character interact offline requiring
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card feature-content h-100">
+              <div class="card-body">
+                <h4 class="featuretitle fahkwang">Multiplayer Interactions</h4>
+                <p class="featuretext fahkwang">
+                  In addition to 1:1 interactions, the ability to interact with two or more people as a group to
+                  complete quests would expand the range of gameplay to new levels.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+
+        <div class="row my-3">
+          <div class="col-lg-4">
+            <div class="card feature-content h-100">
+              <div class="card-body">
+                <h4 class="featuretitle fahkwang">Community Events</h4>
+                <p class="featuretext fahkwang">
+                  In areas where a large number of players are active, we believe large group events could foster
+                  greater engagement.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card feature-content h-100">
+              <div class="card-body">
+                <h4 class="featuretitle fahkwang">Expand the In-Game World</h4>
+                <p class="featuretext fahkwang">
+                  Building on the theme of adventure, we plan to add more complexity and detail to give the characters a
+                  story that adapts and changes over time.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card feature-content h-100">
+              <div class="card-body">
+                <h4 class="featuretitle fahkwang">NPC Interactions</h4>
+                <p class="featuretext fahkwang">
+                  To encourage player interaction, non-player characters will add an extra dimension to gameplay that
+                  serves to facilitate discussion.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="headline fahkwang">Under Consideration</h3>
+
+        <!-- Row 4 -->
+
+        <div class="row my-3">
+          <div class="col-lg-4">
+            <div class="card feature-content h-100">
+              <div class="card-body">
+                <h4 class="featuretitle fahkwang">Smart Watch Integration</h4>
+                <p class="featuretext fahkwang">
+                  People are looking for...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card feature-content h-100">
+              <div class="card-body">
+                <h4 class="featuretitle fahkwang">In-Game Currency</h4>
+                <p class="featuretext fahkwang">
+                  Expanding on the character design, we want to offer a wide range of customization options that can be
+                  purchased with in-game currency. This would also support monitization.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card feature-content h-100">
+              <div class="card-body">
+                <h4 class="featuretitle fahkwang">Explore Alternate Realms</h4>
+                <p class="featuretext fahkwang">
+                  People are looking for...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Prototype -->
+
+  <div class="container-fluid tan-bg border-dark border-bottom">
+    <h1 class="pirata w-100 text-center">Test the Prototype</h1>
+    <div class="row justify-content-center">
+      <div class="col-lg-6 prototype">
+        <iframe width="100%" height="1000"
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FDW0ZKuXxNRDVwirLe8HqaV%2FAnna-%2526-Preston%3Fpage-id%3D208%253A12037%26node-id%3D260%253A10286%26viewport%3D-5858%252C-196%252C0.67%26scaling%3Dmin-zoom%26starting-point-node-id%3D260%253A10286"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Email Signup -->
+
+  <div class="container-fluid green-bg border-dark border-bottom border-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fahkwang w-100 text-center">Get Updated on the Untitled Adventure</h2>
+        <p class="fahkwang">
+          Sign up below to be included on the latest news from The Untitled Adventure.
+        </p>
+      </div>
+      <div class="row justify-content-center my-2">
+        <div class="col-lg-5">
+          <form>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <button type="submit" class="btn email-button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="row justify-content-center my-3">
+        <div class="col-lg-12 text-center">
+          <p class="fahkwang">
+            All rights reserved ©2022 Preston Palmer & Anna Biernacki
+          </p>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+</body>
+
 </html>
