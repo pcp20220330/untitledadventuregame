@@ -3,7 +3,10 @@ $secondary: #F0E4ED;
 $enable-cssgrid: true;
 
 
-@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pirata+One&display=swap');
+
+
+// Global
+
 
 html.sr .load-hidden {
     visibility: hidden;
@@ -12,6 +15,10 @@ html.sr .load-hidden {
 html {
     overflow-x: hidden;
 }
+
+// Text
+
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pirata+One&display=swap');
 
 .pirata {
     font-family: 'Pirata One', cursive;
@@ -24,6 +31,12 @@ html {
 .fahkwang {
     font-family: 'Fahkwang', sans-serif;
 }
+
+h1 {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+// Backgrounds
 
 .field-bg {
     background: url("../images/field-bg.png");
@@ -52,9 +65,36 @@ html {
     background-color: #9AE17B;
 }
 
+// Header
+
 .hero-message {
     width: 90%;
 }
+
+// Overview
+
+.overview-content {
+    align-self: center;
+    padding: 50px;
+}
+
+// Interactions
+
+
+.interaction {
+    align-self: start;
+    margin-top: 50px;
+}
+
+// Team
+
+.preston,
+.anna {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+// Roadmap
 
 h2.headline {
     text-align: center;
@@ -71,14 +111,56 @@ h2.headline:before {
     border-bottom: 1px solid #111;
 }
 
-.prototype {
-    max-width: 392px;
-    max-height: 846px;
+.card {
+    background-image: url("../images/pin.png");
+    background-color: #F6F7EE;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 40px 0 0 0;
+    background-position-y: 10px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    cursor: cell;
 }
 
+.card:hover,
+.card:active,
+.card:focus {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.65) !important;
+}
+
+// Prototype
+
+.prototype {
+    background-image: url("../images/prototype.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 350px;
+    min-height: 699px;
+    display: block;
+}
+
+.prototype:hover,
+.prototype:active {
+    background-image: url("../images/prototype-hover.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// Email Sign-Up
+
+#mc_embed_signup {
+    display: flex;
+}
+
+#mc_embed_signup_scroll {
+    display: flex;
+    flex-direction: row;
+}
 
 .email-button {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -110,46 +192,22 @@ h2.headline:before {
     color: #7CCFFF;
 }
 
-.prototype {
-    background-image: url("../images/prototype.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    min-width: 350px;
-    min-height: 699px;
-    display: block;
+.form-control {
+    max-width: 315px!important;
+    height: 56px;
+    background: #FFFFFF;
+    border: 1px solid #293132!important;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+    border-radius: 10px;
+    display: inline-block!important;
+    margin-bottom: 10px;
 }
 
-.prototype:hover,
-.prototype:active {
-    background-image: url("../images/prototype-hover.png");
-    background-position: center;
-    background-repeat: no-repeat;
+.form-control:focus {
+    border: 2px solid black!important;
 }
 
-.card {
-    background-image: url("../images/pin.png");
-    background-color: #F6F7EE;
-    background-position: center top;
-    background-repeat: no-repeat;
-    padding: 40px 0 0 0;
-    background-position-y: 10px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    cursor: cell;
-}
-
-.card:hover,
-.card:active,
-.card:focus {
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.65) !important;
-}
-
-.preston,
-.anna {
-    max-width: 250px;
-    max-height: 250px;
-}
+// Responsive Elements
 
 .responsive-justify {
     justify-self: left;
@@ -157,35 +215,8 @@ h2.headline:before {
     align-self: center;
 }
 
-.overview-content {
-    align-self: center;
-    padding: 50px;
-}
-
-.interaction {
-    align-self: start;
-    margin-top: 50px;
-}
-
-h1 {
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.form-control {
-    width: 315px !important;
-    height: 56px;
-    background: #FFFFFF;
-    border: 1px solid #293132!important;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
-    border-radius: 10px;
-    display: inline-block!important;
-}
-
-.form-control:focus {
-    border: 2px solid black!important;
-}
-
 // Small Screens
+
 @media only screen and (max-width: 768px) {
     .display-3 {
         font-size: 12vw !important;
@@ -210,12 +241,15 @@ h1 {
         margin: 0 !important;
     }
 
+    #mc_embed_signup_scroll {
+        flex-direction: column;
+        justify-content: center;
+    }
+
 }
 
-
-
-
 // XXL Screens
+
 @media only screen and (min-width: 1400px) {
     .display-3 {
         font-size: 5.5vw !important;
@@ -223,6 +257,6 @@ h1 {
 
 }
 
-
+// Bootstrap Import
 
 @import './bootstrap.scss';

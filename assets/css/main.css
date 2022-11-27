@@ -20,6 +20,10 @@ html {
   font-family: "Fahkwang", sans-serif;
 }
 
+h1, .h1 {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .field-bg {
   background: url("../images/field-bg.png");
   background-size: cover;
@@ -51,6 +55,22 @@ html {
   width: 90%;
 }
 
+.overview-content {
+  align-self: center;
+  padding: 50px;
+}
+
+.interaction {
+  align-self: start;
+  margin-top: 50px;
+}
+
+.preston,
+.anna {
+  max-width: 250px;
+  max-height: 250px;
+}
+
 h2.headline, .headline.h2 {
   text-align: center;
   display: grid;
@@ -67,13 +87,52 @@ h2.headline:before,
   border-bottom: 1px solid #111;
 }
 
+.card {
+  background-image: url("../images/pin.png");
+  background-color: #F6F7EE;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 40px 0 0 0;
+  background-position-y: 10px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  cursor: cell;
+}
+
+.card:hover,
+.card:active,
+.card:focus {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.65) !important;
+}
+
 .prototype {
-  max-width: 392px;
-  max-height: 846px;
+  background-image: url("../images/prototype.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 350px;
+  min-height: 699px;
+  display: block;
+}
+
+.prototype:hover,
+.prototype:active {
+  background-image: url("../images/prototype-hover.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#mc_embed_signup {
+  display: flex;
+}
+
+#mc_embed_signup_scroll {
+  display: flex;
+  flex-direction: row;
 }
 
 .email-button {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -105,79 +164,25 @@ h2.headline:before,
   color: #7CCFFF;
 }
 
-.prototype {
-  background-image: url("../images/prototype.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  min-width: 350px;
-  min-height: 699px;
-  display: block;
-}
-
-.prototype:hover,
-.prototype:active {
-  background-image: url("../images/prototype-hover.png");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.card {
-  background-image: url("../images/pin.png");
-  background-color: #F6F7EE;
-  background-position: center top;
-  background-repeat: no-repeat;
-  padding: 40px 0 0 0;
-  background-position-y: 10px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  cursor: cell;
-}
-
-.card:hover,
-.card:active,
-.card:focus {
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.65) !important;
-}
-
-.preston,
-.anna {
-  max-width: 250px;
-  max-height: 250px;
-}
-
-.responsive-justify {
-  justify-self: left;
-  text-align: left;
-  align-self: center;
-}
-
-.overview-content {
-  align-self: center;
-  padding: 50px;
-}
-
-.interaction {
-  align-self: start;
-  margin-top: 50px;
-}
-
-h1, .h1 {
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .form-control {
-  width: 315px !important;
+  max-width: 315px !important;
   height: 56px;
   background: #FFFFFF;
   border: 1px solid #293132 !important;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
   border-radius: 10px;
   display: inline-block !important;
+  margin-bottom: 10px;
 }
 
 .form-control:focus {
   border: 2px solid black !important;
+}
+
+.responsive-justify {
+  justify-self: left;
+  text-align: left;
+  align-self: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -202,6 +207,11 @@ h1, .h1 {
   .overview-content {
     padding: 0 !important;
     margin: 0 !important;
+  }
+
+  #mc_embed_signup_scroll {
+    flex-direction: column;
+    justify-content: center;
   }
 }
 @media only screen and (min-width: 1400px) {
