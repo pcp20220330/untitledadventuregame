@@ -5,6 +5,14 @@ $enable-cssgrid: true;
 
 @import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pirata+One&display=swap');
 
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
 .pirata {
     font-family: 'Pirata One', cursive;
 }
@@ -70,14 +78,16 @@ h2.headline:before {
 
 
 .email-button {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
     padding: 5px;
     width: 200px;
     height: 50px;
-    background-color: #7CCFFF !important;
+    color: #293132;
+    background-color: #7CCFFF;
     border: 2px solid #FFFFFF !important;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.35);
     border-radius: 30px !important;
@@ -85,21 +95,37 @@ h2.headline:before {
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
+    margin-left:20px;
 }
 
-.email-button:hover {
-    border: 2px solid #000000;
+.email-button:hover, .email-button:focus {
+    color: #293132;
+    border: 2px solid #555!important;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.35), inset -3px -3px 4px rgba(255, 255, 255, 0.6), inset 3px 3px 4px rgba(255, 255, 255, 0.6);
 }
 
-.email-buttom:active {
-    background: #293132;
+.email-button:active {
+    background-color: #293132!important;
     border: 2px solid #000000;
-    box-shadow: inset 3px 3px 4px rgba(129, 129, 129, 0.5), inset -3px -3px 4px rgba(129, 129, 129, 0.5);
-    border-radius: 30px;
+    color: #7CCFFF;
 }
 
+.prototype {
+    background-image: url("../images/prototype.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 350px;
+    min-height: 699px;
+    display: block;
+}
 
+.prototype:hover,
+.prototype:active {
+    background-image: url("../images/prototype-hover.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .card {
     background-image: url("../images/pin.png");
@@ -128,53 +154,71 @@ h2.headline:before {
 .responsive-justify {
     justify-self: left;
     text-align: left;
+    align-self: center;
 }
 
 .overview-content {
     align-self: center;
-    padding:50px;
+    padding: 50px;
 }
 
 .interaction {
     align-self: start;
-    margin-top:50px;
+    margin-top: 50px;
 }
 
 h1 {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.form-control {
+    width: 315px !important;
+    height: 56px;
+    background: #FFFFFF;
+    border: 1px solid #293132!important;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+    border-radius: 10px;
+    display: inline-block!important;
+}
+
+.form-control:focus {
+    border: 2px solid black!important;
+}
+
 // Small Screens
-@media (max-width: 576px) {
+@media only screen and (max-width: 768px) {
     .display-3 {
         font-size: 12vw !important;
     }
 
-	.alternating-container-text	{
-		grid-row: 1;
-	}
+    .alternating-container-text {
+        grid-row: 1;
+    }
 
     .responsive-justify {
-        justify-self: center!important;
+        justify-self: center !important;
         text-align: center;
     }
 
     .interaction {
         margin-top: 0px;
-        padding:0 25px;
+        padding: 0 25px;
     }
 
     .overview-content {
-        padding:0!important;
-        margin:0!important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
 }
 
+
+
+
 // XXL Screens
-@media (min-width: 1400px) {
+@media only screen and (min-width: 1400px) {
     .display-3 {
-        font-size: 5.5vw!important;
+        font-size: 5.5vw !important;
     }
 
 }

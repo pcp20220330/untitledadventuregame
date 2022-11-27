@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <script src="https://unpkg.com/scrollreveal"></script>
   <title>The Untitled Adventure | A Social Interaction Game by Preston & Anna</title>
   <link rel="stylesheet" href="./assets/css/main.css">
 
@@ -13,20 +13,57 @@
 
 <body>
 
+  <div class="hidden">
+    <script type="text/javascript">
+
+
+      function preloader() {
+        if (document.images) {
+          var img1 = new Image();
+          var img2 = new Image();
+          var img3 = new Image();
+          var img4 = new Image();
+
+          img1.src = "./images/prototype.png";
+          img2.src = "./images/prototype-hover.png";
+          img3.src = "./images/path-bg.png";
+          img4.src = "./images/cork-bg.png";
+        }
+      }
+      function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+          window.onload = func;
+        } else {
+          window.onload = function () {
+            if (oldonload) {
+              oldonload();
+            }
+            func();
+          }
+        }
+      }
+      addLoadEvent(preloader);
+
+    </script>
+  </div>
+
+ 
   <!-- Header -->
 
   <div class="container-fluid border-dark border-bottom field-bg site-header py-4 px-0">
     <div class="row align-items-center h-100">
       <div
-        class="col-10 col-xxl-3 col-xl-4 col-lg-5 col-md-6 col-sm-8 m-auto d-flex flex-column align-items-center justify-content-center">
-        <div class="m-3">
+        class="col-10 col-xxl-4 col-xl-4 col-lg-5 col-md-6 col-sm-8 m-auto d-flex flex-column align-items-center justify-content-center">
+        <div class="m-4">
           <img src="./assets/images/logo.png" alt="The Untitled Adventure logo"
             class="w-100 center-block img-responsive">
           <h4 class="catchphrase fahkwang text-center m-2">
             Shape your Character, Title your Adventure!
             </h2>
         </div>
-        <img src="./assets/images/hero-messages.png" alt="The Untitled Adventure logo" class="hero-message m-2">
+        <img src="./assets/images/hero-messages.png" alt="The Untitled Adventure logo" class="hero-message m-2 p-xxl-4">
+        <a href="#register" class="register email-button">Register</a>
       </div>
     </div>
   </div>
@@ -49,32 +86,36 @@
         </p>
       </div>
     </div>
-    <div class="row justify-content-center mx-0 mb-5">
-      <div class="col-lg-10 px-0 justify-content-center">
-        <div class="grid mx-2">
-          <div class="g-col-12 g-col-sm-6 g-col-md-8 g-col-lg-8 g-col-xl-8 g-col-xxl-8 overview-content">
+    <div class="row justify-content-center mx-0 mb-5 w-100">
+      <div class="col-lg-10">
+        <div class="grid mx-2 m-sm-0">
+          <div class="g-col-12 g-col-sm-12 g-col-md-8 g-col-lg-8 g-col-xl-8 g-col-xxl-8 overview-content">
             <h2 class="fahkwang fw-bold display-5">Design a Character</h2>
-        <p class="baskerville fs-5">
-          Create your own unique character who travels the world with you meeting other characters everywhere you go. Characters are naturally extroverted and want to be friends with almost everyone they meet.
-        </p>
+            <p class="baskerville fs-5">
+              Create your own unique character who travels the world with you meeting other characters everywhere you
+              go. Characters are naturally extroverted and want to be friends with almost everyone they meet.
+            </p>
           </div>
-          <div class="g-col-12 g-col-sm-6 g-col-md-4 g-col-lg-4 g-col-xl-4 g-col-xxl-4 responsive-justify">
-            <img src="./assets/images/createcharacter.png" alt="" class="createcharacter my-3 screen-image">
+          <div
+            class="showcase-right g-col-12 g-col-sm-12 g-col-md-4 g-col-lg-4 g-col-xl-4 g-col-xxl-4 responsive-justify">
+            <img src="./assets/images/createcharacter.png" alt="" class="createcharacter w-100 my-3 screen-image">
           </div>
         </div>
       </div>
     </div>
     <div class="row mx-0 mb-5 w-100 justify-content-center">
       <div class="col-lg-10">
-        <div class="grid mx-2">
-          <div class="g-col-12 g-col-sm-6 g-col-md-4 g-col-lg-4 g-col-xl-4 g-col-xxl-4 responsive-justify">
+        <div class="grid mx-2 m-sm-0">
+          <div
+            class="showcase-left g-col-12 g-col-sm-12 g-col-md-4 g-col-lg-4 g-col-xl-4 g-col-xxl-4 responsive-justify">
             <img src="./assets/images/adventureboard.png" alt="" class="adventureboard my-3 w-100 screen-image">
           </div>
           <div
-            class="g-col-12 g-col-sm-6 g-col-md-8 g-col-lg-8 g-col-xl-8 g-col-xxl-8 overview-content alternating-container-text">
+            class="g-col-12 g-col-sm-10 g-col-md-8 g-col-lg-8 g-col-xl-8 g-col-xxl-8 overview-content alternating-container-text">
             <h3 class="fahkwang fw-bold display-5">Develop the Story</h3>
             <p class="baskerville fs-5">
-              Your character stays active and posts updates on the Adventure Board. Check-in regularly to give it advice and develop its personality.
+              Your character stays active and posts updates on the Adventure Board. Check-in regularly to give it advice
+              and develop its personality.
             </p>
           </div>
         </div>
@@ -89,7 +130,7 @@
     <div class="row justify-content-center mb-5">
       <div class="col-10 col-lg-10 px-0 justify-content-center">
         <div class="grid">
-          <div class="g-col-12 g-col-sm-6 g-col-md-8 g-col-lg-8 g-col-xl-8 g-col-xxl-8 interaction">
+          <div class="g-col-12 g-col-sm-12 g-col-md-8 g-col-lg-8 g-col-xl-8 g-col-xxl-8 interaction">
             <h2 class="fahkwang display-6 fw-bold">1. Break the Ice</h2>
             <p class="baskerville fs-5">
               Start by encountering other adventurers nearby and discover eachother's hidden interests through a
@@ -97,7 +138,8 @@
               game format.
             </p>
           </div>
-          <div class="g-col-12 g-col-sm-6 g-col-md-4 g-col-lg-4 g-col-xl-4 g-col-xxl-4 responsive-justify">
+          <div
+            class="interaction-one g-col-12 g-col-sm-12 g-col-md-4 g-col-lg-4 g-col-xl-4 g-col-xxl-4 responsive-justify">
             <img src="./assets/images/firstinteraction.png" alt="" class="firstinteraction">
           </div>
         </div>
@@ -106,11 +148,12 @@
     <div class="row mx-0 mb-5 w-100 justify-content-center">
       <div class="col-lg-10">
         <div class="grid">
-          <div class="g-col-12 g-col-sm-6 g-col-md-4 g-col-lg-4 g-col-xl-4 g-col-xxl-4 responsive-justify">
+          <div
+            class="interaction-two g-col-12 g-col-sm-12 g-col-md-4 g-col-lg-4 g-col-xl-4 g-col-xxl-4 responsive-justify">
             <img src="./assets/images/secondinteraction.png" alt="" class="secondinteraction">
           </div>
           <div
-            class="g-col-12 g-col-sm-6 g-col-md-8 g-col-lg-8 g-col-xl-8 g-col-xxl-8 interaction alternating-container-text">
+            class="g-col-12 g-col-sm-12 g-col-md-8 g-col-lg-8 g-col-xl-8 g-col-xxl-8 interaction alternating-container-text">
             <h3 class="fahkwang fw-bold display-6">2. Meet Again</h3>
             <p class="baskerville fs-5">
               After you meet a second time, your interests are displayed and the keyboard becomes available to chat in
@@ -123,14 +166,15 @@
     <div class="row mx-0 mb-5 w-100 justify-content-center">
       <div class="col-lg-10">
         <div class="grid">
-          <div class="g-col-12 g-col-sm-6 g-col-md-8 g-col-lg-8 g-col-xl-8 g-col-xxl-8 interaction">
+          <div class="g-col-12 g-col-sm-12 g-col-md-8 g-col-lg-8 g-col-xl-8 g-col-xxl-8 interaction">
             <h2 class="fahkwang fw-bold display-6">3. Make Friends</h2>
             <p class="baskerville fs-5">
               Create friendships with people you encounter frequently. Then, when you're both ready, you can meet face
               to face.
             </p>
           </div>
-          <div class="g-col-12 g-col-sm-6 g-col-md-4 g-col-lg-4 g-col-xl-4 g-col-xxl-4 responsive-justify">
+          <div
+            class="interaction-three g-col-12 g-col-sm-12 g-col-md-4 g-col-lg-4 g-col-xl-4 g-col-xxl-4 responsive-justify">
             <img src="./assets/images/friendslist.png" alt="" class="friendslist">
           </div>
         </div>
@@ -142,8 +186,8 @@
   <!-- Meet the Team -->
 
   <div class="container-fluid bg-secondary border-dark border-bottom py-5">
-    <div class="row m-0 w-100 justify-content-center">
-      <div class="col-lg-10 mb-4">
+    <div class=" row m-0 w-100 justify-content-center">
+      <div class="col-10 mb-4">
         <h1 class="display-3 mb-5 pirata w-100 text-center ">Meet the Team</h1>
         <p class="baskerville fs-5">
           Preston and Anna attended the University of Minnesota UX/UI Bootcamp and received certification in 2022.<br>
@@ -155,28 +199,28 @@
       </div>
     </div>
     <div class="row w-100 m-0 justify-content-center">
-      <div class="col-auto col-sm-5 m-0">
+      <div class="team-left col-auto col-12 col-sm-12 col-lg-10 col-xl-10 m-0">
         <div class="row">
-          <div class="col-12 col-sm-4 responsive-justify">
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 responsive-justify">
             <img src="./assets/images/anna.png" alt="" class="anna p-4 img-fluid">
           </div>
-          <div class="col-sm-8 responsive-justify">
+          <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-9 responsive-justify">
             <h2 class="teamname fahkwang fw-bold">Anna Biernacki</h2>
-            <p class="fahkwang">
+            <p class="fahkwang fs-5">
               Anna is... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget lectus convallis, auctor
               nibh nec, congue ligula.
             </p>
           </div>
         </div>
       </div>
-      <div class="col-auto col-sm-5 m-0">
+      <div class="team-right col-auto col-12 col-sm-12 col-lg-10 col-xl-10 m-0">
         <div class="row">
-          <div class="col-12 col-sm-4 responsive-justify">
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 responsive-justify">
             <img src="./assets/images/preston.png" alt="" class="preston p-4 img-fluid">
           </div>
-          <div class="col-sm-8 responsive-justify">
+          <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-9 responsive-justify">
             <h2 class="teamname fahkwang fw-bold">Preston Palmer</h2>
-            <p class="fahkwang">
+            <p class="fahkwang fs-5">
               Preston is a Minneapolis-based game designer and developer seeking a career in UX Design. In his free time
               he loves learning about Astronomy and Quantum Mechanics.
             </p>
@@ -355,33 +399,31 @@
   <div class="container-fluid tan-bg border-dark border-bottom py-5">
     <h1 class="display-3 mb-5 pirata m-0 w-100 text-center">Test the Prototype</h1>
     <div class="row justify-content-center">
-      <div class="col-lg-4">
-        <a target="_blank"
-          href="https://www.figma.com/proto/DW0ZKuXxNRDVwirLe8HqaV/Anna-%26-Preston?page-id=15%3A14&node-id=125%3A1525&viewport=-2550%2C-3162%2C1.28&scaling=scale-down&starting-point-node-id=125%3A1525"><img
-            src="./assets/images/prototype.png" alt="Image of The Untitled Adventure Prototype"
-            class="prototype w-100 img-fluid"></a>
+      <div class="col-12 col-sm-8 col-md-8 col-lg-4 col-xl-6 col-xxl-4">
+        <a class="prototype img-fluid" target="_blank"
+          href="https://www.figma.com/proto/DW0ZKuXxNRDVwirLe8HqaV/Anna-%26-Preston?page-id=15%3A14&node-id=125%3A1525&viewport=-2550%2C-3162%2C1.28&scaling=scale-down&starting-point-node-id=125%3A1525"></a>
       </div>
     </div>
   </div>
 
   <!-- Email Signup -->
 
-  <div class="container-fluid green-bg border-dark border-bottom border-5 pt-5">
+  <footer id="register" class="container-fluid green-bg border-dark border-bottom border-5 pt-5">
     <div class="row justify-content-center">
-      <div class="col-lg-6">
-        <h2 class="fahkwang w-100 text-center">Get Updated on the Untitled Adventure</h2>
-        <p class="fahkwang text-center">
+      <div class="col-12 col-lg-9">
+        <h2 class="display-6 fw-bold fahkwang w-100 text-center">Get Updates about The Untitled Adventure</h2>
+        <p class="fahkwang fs-5 text-center fw-semibold">
           Sign up below to be included on the latest news from The Untitled Adventure.
         </p>
       </div>
-      <div class="row justify-content-center my-2">
-        <div class="col-lg-5">
+      <div class="row justify-content-center my-5">
+        <div class="col-9 col-lg-6 col-xxl-5">
           <form>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <div class="mx-auto mb-3 flex-row">
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+              <button type="submit" class="mb-2 email-button">Subscribe</button>
             </div>
-            <button type="submit" class="btn email-button">Subscribe</button>
+
           </form>
         </div>
       </div>
@@ -393,11 +435,95 @@
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
+
+  <script>
+    window.sr = ScrollReveal();
+    sr.reveal('.showcase-left', {
+      duration: 2000,
+      origin: 'left',
+      distance: '300px',
+      viewFactor: 0.5
+    });
+    sr.reveal('.showcase-right', {
+      duration: 2000,
+      origin: 'right',
+      distance: '300px',
+      viewFactor: 0.5
+    });
+
+    sr.reveal('.interaction-one', {
+      duration: 2000,
+      origin: 'right',
+      distance: '300px',
+      viewFactor: 0.4
+    });
+
+    sr.reveal('.interaction-two', {
+      duration: 2000,
+      origin: 'left',
+      distance: '300px',
+      viewFactor: 0.4
+    });
+
+    sr.reveal('.interaction-three', {
+      duration: 2000,
+      origin: 'right',
+      distance: '300px',
+      viewFactor: 0.4
+    });
+
+    sr.reveal('.team-left', {
+      duration: 2000,
+      origin: 'left',
+      distance: '300px',
+      viewFactor: 0.1
+    });
+    sr.reveal('.team-right', {
+      duration: 2000,
+      origin: 'right',
+      distance: '300px',
+      viewFactor: 0.1
+    });
+
+    sr.reveal('.prototype', {
+      duration: 2000,
+      origin: 'bottom',
+      distance: '150px',
+      viewFactor: 0.1
+    });
+
+    $('.email-button').on('click', function () {
+      $(this).addClass('button-active');
+    });
+  </script>
+
+  <script>
+    $(function () {
+      // Smooth Scrolling
+      $('a[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+  </script>
+
+
+
 
 </body>
 
